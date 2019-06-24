@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-timebox',
@@ -7,12 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimeboxComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   }
 
+  
   ngOnInit() {
   }
 
-  timeLeft: number = 60;
+  @Input() timeLeft: number;
+  @Input() name: string;
   interval;
 
 startTimer() {
@@ -29,6 +34,7 @@ startTimer() {
     clearInterval(this.interval);
   }
 
+  
 
 
 }

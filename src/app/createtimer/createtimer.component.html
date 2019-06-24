@@ -1,5 +1,31 @@
 <hr>
  <div class="container-fluid">
-   Here we create the timer!
+   <form class="form-horizontal">
+     <div class="form-group">
+       <label for="name">Name: </label>
+       <input type="text" id="name" class="form-control col-sm-3"/>
+     </div>
+     <div class="form-group">
+       <div class="row">
+        <div class="col-sm-3">
+          <label for="time_h">Hours: </label>
+          <input type="number" value="0" min="0" step="1" id="time_h" class="form-control"/>
+        </div>
+        <div class="col-sm-3">
+          <label for="time_m">Minutes: </label>
+          <input type="number" value="0" min="0" max="59" step="1" id="time_m" class="form-control col-sm-3"/>
+        </div>  
+        <div class="col-sm-3">
+          <label for="time_s">Seconds: </label>
+          <input type="number" value="0" min="0" max="59" step="1" id="time_s" class="form-control col-sm-3"/>
+        </div>
+       </div>
+       <hr>
+       <button type="submit" class="btn btn-default" (click)="createNow()">Create</button>
+      </div>
+
+     
+     
+   </form>
  </div>
  <hr>
